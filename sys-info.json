@@ -1,0 +1,4 @@
+{
+  "runningcontainers":["§§INSTANCE-plone"],
+  "supportcontainers":["§§INSTANCE-owncloud-data"]
+}

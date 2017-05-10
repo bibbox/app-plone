@@ -1,0 +1,26 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  §§INSTANCE-plone:
+    image: plone:4.3.12
+    container_name:  §§INSTANCE-plone
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    ports:
+      - "§§PORT:8080"
+    depends_on:
+      - §§INSTANCE-plone-data
+    volumes_from: 
+      - §§INSTANCE-plone-data
+
+  §§INSTANCE-plone-data:
+    image: busybox
+    container_name: §§INSTANCE-plone-data
+    volumes:
+      - ./mounted/data:/data
