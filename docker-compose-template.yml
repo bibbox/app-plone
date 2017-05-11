@@ -7,7 +7,8 @@ networks:
 services:
 
   §§INSTANCE-plone:
-    image: plone:4.3.12
+    # image: plone:4.3.12
+    build: ./images/plone
     container_name:  §§INSTANCE-plone
     restart: unless-stopped
     networks:
