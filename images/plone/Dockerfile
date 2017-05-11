@@ -44,6 +44,9 @@ VOLUME /data
 
 COPY docker-initialize.py docker-entrypoint.sh /
 
+RUN chmod +x /docker-entrypoint.sh
+RUN chmod +x /docker-initialize.py
+
 EXPOSE 8080
 USER plone
 WORKDIR /plone/instance
