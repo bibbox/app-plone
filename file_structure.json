@@ -2,7 +2,8 @@
   "makefolders":[
     "mounted/data/filestorage",
     "mounted/data/blobstorage",
-    "mounted/data/instance"
+    "mounted/data/instance",
+    "mounted/data/log"
   ],
   "copyfiles":[]
 }
