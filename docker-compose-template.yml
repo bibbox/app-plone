@@ -23,5 +23,3 @@ services:
     image: busybox
     container_name: §§INSTANCE-plone-data
     volumes:
-      - ./mounted/data/filestorage:/data/filestorage
-      - ./mounted/data/blobstorage:/data/blobstorage
