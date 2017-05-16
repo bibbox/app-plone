@@ -1,7 +1,8 @@
 {
   "makefolders":[
     "mounted/data/filestorage",
-    "mounted/data/blobstorage"
+    "mounted/data/blobstorage",
+    "mounted/data/instance"
   ],
   "copyfiles":[]
 }
