@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-plone:
-    image: gmauro/bikaplone
+    image: bibbox/plone
     container_name:  §§INSTANCE-plone
     restart: unless-stopped
     networks:
