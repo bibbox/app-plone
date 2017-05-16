@@ -1,4 +1,4 @@
 {
   "runningcontainers":["§§INSTANCE-plone"],
-  "supportcontainers":[]
+  "supportcontainers":["§§INSTANCE-plone-data"]
 }
