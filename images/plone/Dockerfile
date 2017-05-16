@@ -46,8 +46,8 @@ VOLUME /data/filestorage /data/blobstorage
 
 COPY docker-initialize.py docker-entrypoint.sh /
 
-RUN chmod +x /docker-entrypoint.sh
-RUN chmod +x /docker-initialize.py
+RUN chmod a+x /docker-entrypoint.sh
+RUN chmod a+x /docker-initialize.py
 
 EXPOSE 8080
 USER plone
