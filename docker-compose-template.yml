@@ -14,12 +14,3 @@ services:
       - bibbox-default-network
     ports:
       - "§§PORT:8080"
-    depends_on:
-      - §§INSTANCE-plone-data
-    volumes_from: 
-      - §§INSTANCE-plone-data
-
-  §§INSTANCE-plone-data:
-    image: busybox
-    container_name: §§INSTANCE-plone-data
-    volumes:
