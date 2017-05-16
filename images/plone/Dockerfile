@@ -33,12 +33,12 @@ RUN buildDeps="curl sudo git nano python-setuptools python-dev build-essential l
  && echo '\n[zeoserver]\n<= zeoserver_base\nrecipe = plone.recipe.zeoserver' >> buildout.cfg \
  && sudo -u plone bin/buildout \
  && chown -R plone:plone /plone /data \
- && rm -rf /Plone* \
- && SUDO_FORCE_REMOVE=yes apt-get purge -y --auto-remove $buildDeps \
- && apt-get install -y --no-install-recommends $runDeps \
- && rm -rf /var/lib/apt/lists/* \
- && rm -rf /plone/buildout-cache/downloads/* \
- && find /plone \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' +
+#  && rm -rf /Plone* \
+#  && SUDO_FORCE_REMOVE=yes apt-get purge -y --auto-remove $buildDeps \
+ && apt-get install -y --no-install-recommends $runDeps
+#  && rm -rf /var/lib/apt/lists/* \
+#  && rm -rf /plone/buildout-cache/downloads/* \
+#  && find /plone \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' +
 
 VOLUME /data
 
