@@ -6,8 +6,8 @@ RUN useradd --system -m -d /plone -U -u 500 plone \
  && chown -R plone:plone /data
 
 ENV PLONE_MAJOR=4.3
-ENV PLONE_VERSION=4.3.12
-ENV PLONE_MD5=62291e00e1b86b8794772e6841a29570
+ENV PLONE_VERSION=4.3.5
+ENV PLONE_MD5=89cbc8ded37e51b397c2e738c57cf425
 
 LABEL plone.version=$PLONE_VERSION
 LABEL os="debian" os.version="8"
@@ -30,7 +30,9 @@ RUN buildDeps="curl sudo git nano python-setuptools python-dev build-essential l
       none \
  && cd /plone/instance \
  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
- && echo '\n[zeoserver]\n<= zeoserver_base\nrecipe = plone.recipe.zeoserver' >> buildout.cfg \
+ && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
+ && sed -i 's/eggs =/eggs =\n    bika.lims/g' buildout.cfg \
+ && echo '\n[zeoserver]\nrecipe = plone.recipe.zeoserver\nfile-storage = /data/filestorage/Data.fs\nblob-storage = /data/blobstorage' >> buildout.cfg \
  && sudo -u plone bin/buildout \
  && chown -R plone:plone /plone /data \
 #  && rm -rf /Plone* \
@@ -40,7 +42,7 @@ RUN buildDeps="curl sudo git nano python-setuptools python-dev build-essential l
 #  && rm -rf /plone/buildout-cache/downloads/* \
 #  && find /plone \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' +
 
-VOLUME /data
+VOLUME /data/filestorage /data/blobstorage
 
 COPY docker-initialize.py docker-entrypoint.sh /
 
@@ -48,7 +50,7 @@ RUN chmod +x /docker-entrypoint.sh
 RUN chmod +x /docker-initialize.py
 
 EXPOSE 8080
-USER root
+USER plone
 WORKDIR /plone/instance
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
