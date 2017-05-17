@@ -6,7 +6,7 @@ RUN useradd --system -U -u 500 plone \
  && chown -R plone:plone /plone /data
 
 ENV PLONE_MAJOR=4.3
-ENV PLONE_VERSION=4.3.5
+ENV PLONE_VERSION=4.3.9
 ENV PLONE_MD5=89cbc8ded37e51b397c2e738c57cf425
 
 ENV DEBIAN_FRONTEND noninteractive
