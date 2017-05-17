@@ -73,7 +73,7 @@ RUN ./Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller/install.sh \
       --instance=instance \
       --var=/data \
       none
-COPY buildout.cfg sources.cfg /plone/instance
+COPY buildout.cfg sources.cfg /plone/instance/
 RUN cd /plone/instance \
 #  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313859d5-dd4b-4de9-ac1f-8abdb08f2513" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/plone/buildout.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/plone/sources.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/plone/Dockerfile" afterPath="$PROJECT_DIR$/images/plone/Dockerfile" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="685">
-              <caret line="75" column="45" lean-forward="false" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+              <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -656,12 +653,12 @@
       <option name="presentableId" value="Default" />
       <updated>1494427515269</updated>
       <workItem from="1494427516493" duration="20104000" />
-      <workItem from="1495005823953" duration="7110000" />
+      <workItem from="1495005823953" duration="7570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27214000" />
+    <option name="totallyTimeSpent" value="27674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1075" y="117" width="1658" height="1244" extended-state="0" />
@@ -901,7 +898,7 @@
     <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
-          <caret line="75" column="45" lean-forward="false" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
           <folding />
         </state>
       </provider>
