@@ -17,8 +17,8 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+            <state relative-caret-position="700">
+              <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file leaf-file-name="buildout.cfg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/plone/buildout.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -653,12 +653,12 @@
       <option name="presentableId" value="Default" />
       <updated>1494427515269</updated>
       <workItem from="1494427516493" duration="20104000" />
-      <workItem from="1495005823953" duration="10395000" />
+      <workItem from="1495005823953" duration="11536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30499000" />
+    <option name="totallyTimeSpent" value="31640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1115" y="103" width="1658" height="1244" extended-state="0" />
@@ -879,14 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/plone/buildout.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/plone/sources.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -895,10 +887,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/plone/buildout.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+        <state relative-caret-position="700">
+          <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
           <folding />
         </state>
       </provider>
