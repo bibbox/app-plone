@@ -74,19 +74,19 @@ RUN ./Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller/install.sh \
       --var=/data \
       none
 COPY buildout.cfg sources.cfg /plone/instance/
-RUN cd /plone/instance \
+RUN cd /plone/instance
 #  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    bika.lims/g' buildout.cfg \
 #  && echo '\n[zeoserver]\nrecipe = plone.recipe.zeoserver\nfile-storage = /data/filestorage/Data.fs\nblob-storage = /data/blobstorage' >> buildout.cfg \
- && sudo -u plone bin/buildout \
- && chown -R plone:plone /plone /data \
- && rm -rf /Plone* \
- && rm -rf /var/lib/apt/lists/* \
- && rm -rf /plone/buildout-cache/downloads/* \
- && find /plone \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' + \
- && apt-get autoremove \
- && apt-get clean
+RUN sudo -u plone bin/buildout
+RUN chown -R plone:plone /plone /data
+RUN rm -rf /Plone*
+RUN rm -rf /var/lib/apt/lists/*
+RUN rm -rf /plone/buildout-cache/downloads/*
+RUN find /plone \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec rm -rf '{}' +
+RUN apt-get autoremove
+RUN apt-get clean
 
 VOLUME /data/filestorage /data/blobstorage
 
