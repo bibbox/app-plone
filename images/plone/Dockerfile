@@ -60,7 +60,7 @@ RUN apt-get update && \
     libxslt1.1 \
     libxml2 \
     libjpeg62
-                          https://launchpad.net/plone/4.3         /4.3.9         /+download/Plone-4.3.9-r1-UnifiedInstaller.tgz
+    
 RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz \
  && echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
  && tar -xzf Plone.tgz \
