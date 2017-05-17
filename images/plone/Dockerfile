@@ -62,9 +62,9 @@ RUN apt-get update && \
     libjpeg62
 
 RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz \
- && echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
- && tar -xzf Plone.tgz \
- && ./Plone-$PLONE_VERSION-UnifiedInstaller/install.sh \
+RUN echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
+RUN tar -xzf Plone.tgz \
+RUN ./Plone-$PLONE_VERSION-UnifiedInstaller/install.sh \
       --password=admin \
       --daemon-user=plone \
       --owner=plone \
@@ -73,7 +73,7 @@ RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSIO
       --instance=instance \
       --var=/data \
       none \
- && cd /plone/instance \
+RUN cd /plone/instance \
  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
  && sed -i 's/eggs =/eggs =\n    bika.lims/g' buildout.cfg \
