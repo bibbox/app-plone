@@ -74,8 +74,8 @@ RUN ./Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller/install.sh \
       --var=/data \
       none
 WORKDIR /plone/instance
-COPY buildout.cfg ./buildout.cfg
-COPY sources.cfg ./sources.cfg
+COPY buildout.cfg /plone/instance/buildout.cfg
+COPY sources.cfg /plone/instance/sources.cfg
 #  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    bika.lims/g' buildout.cfg \
