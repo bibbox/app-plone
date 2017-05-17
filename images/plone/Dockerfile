@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Gianmauro Cuccuru <gmauro@crs4.it>
+MAINTAINER Lukas Pessl <lukas.pessl@medunigraz.at>
 
 RUN useradd --system -U -u 500 plone \
  && mkdir -p /plone /data/filestorage /data/blobstorage \
@@ -7,8 +7,8 @@ RUN useradd --system -U -u 500 plone \
 
 ENV PLONE_MAJOR=4.3
 ENV PLONE_VERSION=4.3.9
-ENV RELEASE_VERSION=-r1
-ENV PLONE_MD5=r5wAoOoRDNZiHBq+5rwi0aPBVhoDInHV
+ENV RELEASE_VERSION="-r1"
+ENV PLONE_MD5="ac256fc1b388aea43ea799326d92ab23"
 
 ENV DEBIAN_FRONTEND noninteractive
 
