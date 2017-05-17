@@ -64,7 +64,7 @@ RUN apt-get update && \
 RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz
 RUN echo "$PLONE_MD5 Plone.tgz" | md5sum -c -
 RUN tar -xzf Plone.tgz
-RUN ./Plone-$PLONE_VERSION-UnifiedInstaller/install.sh \
+RUN ./Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller/install.sh \
       --password=admin \
       --daemon-user=plone \
       --owner=plone \
