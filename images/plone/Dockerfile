@@ -73,9 +73,8 @@ RUN ./Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller/install.sh \
       --instance=instance \
       --var=/data \
       none
-RUN cd /plone/instance
-RUN rm /plone/instance/buildout.cfg
-COPY buildout.cfg /plone/instance/buildout.cfg
+WORKDIR /plone/instance
+COPY buildout.cfg /buildout.cfg
 COPY sources.cfg /plone/instance/sources.cfg
 #  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
 #  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
@@ -98,7 +97,6 @@ RUN chmod a+x /docker-entrypoint.sh
 
 EXPOSE 8080
 USER plone
-WORKDIR /plone/instance
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["start"]
