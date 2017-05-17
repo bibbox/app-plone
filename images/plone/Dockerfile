@@ -7,7 +7,7 @@ RUN useradd --system -U -u 500 plone \
 
 ENV PLONE_MAJOR=4.3
 ENV PLONE_VERSION=4.3.9
-ENV REALESE_VERSION=-r1
+ENV RELEASE_VERSION=-r1
 ENV PLONE_MD5=r5wAoOoRDNZiHBq+5rwi0aPBVhoDInHV
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -60,7 +60,7 @@ RUN apt-get update && \
     libxslt1.1 \
     libxml2 \
     libjpeg62
-    
+
 RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz \
  && echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
  && tar -xzf Plone.tgz \

@@ -17,8 +17,8 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+            <state relative-caret-position="225">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -122,6 +122,7 @@
       <find>entry</find>
       <find>$runDeps</find>
       <find>runDeps</find>
+      <find>RELEASE_VERSION</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -647,12 +648,12 @@
       <option name="presentableId" value="Default" />
       <updated>1494427515269</updated>
       <workItem from="1494427516493" duration="20104000" />
-      <workItem from="1495005823953" duration="2902000" />
+      <workItem from="1495005823953" duration="3456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23006000" />
+    <option name="totallyTimeSpent" value="23560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1075" y="117" width="1658" height="1244" extended-state="0" />
@@ -875,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/plone/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>
