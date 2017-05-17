@@ -80,7 +80,7 @@ RUN cd /plone/instance
 #  && sed -i 's/eggs =/eggs =\n    bika.lims/g' buildout.cfg \
 #  && echo '\n[zeoserver]\nrecipe = plone.recipe.zeoserver\nfile-storage = /data/filestorage/Data.fs\nblob-storage = /data/blobstorage' >> buildout.cfg \
 RUN chown -R plone:plone /plone /data
-RUN sudo -u plone bin/buildout
+RUN bin/buildout
 RUN rm -rf /Plone*
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /plone/buildout-cache/downloads/*
