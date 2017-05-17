@@ -61,9 +61,9 @@ RUN apt-get update && \
     libxml2 \
     libjpeg62
 
-RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz \
-RUN echo "$PLONE_MD5 Plone.tgz" | md5sum -c - \
-RUN tar -xzf Plone.tgz \
+RUN curl -o Plone.tgz -SL https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/Plone-$PLONE_VERSION$RELEASE_VERSION-UnifiedInstaller.tgz
+RUN echo "$PLONE_MD5 Plone.tgz" | md5sum -c -
+RUN tar -xzf Plone.tgz
 RUN ./Plone-$PLONE_VERSION-UnifiedInstaller/install.sh \
       --password=admin \
       --daemon-user=plone \
@@ -72,7 +72,7 @@ RUN ./Plone-$PLONE_VERSION-UnifiedInstaller/install.sh \
       --target=/plone \
       --instance=instance \
       --var=/data \
-      none \
+      none
 RUN cd /plone/instance \
  && sed -i 's/parts =/parts =\n    zeoserver/g' buildout.cfg \
  && sed -i 's/eggs =/eggs =\n    plone.jsonapi.core/g' buildout.cfg \
