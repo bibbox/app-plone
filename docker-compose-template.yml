@@ -7,8 +7,8 @@ networks:
 services:
 
   §§INSTANCE-plone:
-    image: bibbox/plone
-    container_name:  §§INSTANCE-plone
+    image: plone:5.0.7
+    container_name: §§INSTANCE-plone
     restart: unless-stopped
     networks:
       - bibbox-default-network

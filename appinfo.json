@@ -1,7 +1,7 @@
 {
-		"name": "Plone 4.3.12",
+		"name": "Plone",
 		"short_name": "Plone",
-		"version": "v4.3.12",
+		"version": "v5.0.7",
 		"description": "Plone is a free and open source content management system built on top of Zope.",
         "short_description": "Content Management System",
 		"catalogue_url": "",
