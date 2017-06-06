@@ -2,13 +2,16 @@
 
 ## Hints
 * approx. time with medium fast internet connection: **5 minutes**
-* initial user/passwordd: **admin / admin**
+* initial user/password: **admin / admin**
 
 
 ## Docker Images Used
 
- 
-## Install Environment Variables
+- plone:5.0.7
+- busybox:latest
+
 
 ## Mounted Volumes
 
+- /data/filestorage
+- /data/blobstorage
